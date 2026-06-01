@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Before You Say Yes
+
+**Before You Say Yes** is an AI-powered web application that helps users analyze offers before accepting them.
+
+The project was built to solve a real problem: many people receive job offers, freelance opportunities, contracts, collaborations, or other important proposals, but they are not always sure if the offer is trustworthy, complete, safe, or worth moving forward with.
+
+This website helps users check an offer, understand possible risks, identify missing information, and make a more confident decision before saying yes.
+
+## Features
+
+* Analyze offers using AI
+* Detect suspicious or risky details
+* Show red flags and green flags
+* Provide a clear recommendation
+* Suggest important questions the user should ask before accepting
+* Upload or paste offer details
+* Save analyzed offers in a history page
+* Track offer status over time
+* Mark whether the user moved forward with the offer
+* Mark whether the offer eventually succeeded or not
+* User authentication with login and registration
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Prisma
+* SQLite for local development
+* Groq API for AI analysis
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file in the root of the project and add your environment variables:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the website in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Important Notes
 
-## Learn More
+The `.env` file should not be uploaded to GitHub because it contains private API keys.
 
-To learn more about Next.js, take a look at the following resources:
+The project includes `.env.example` only as a safe example file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Goal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal of **Before You Say Yes** is to help users avoid risky or unclear offers while also giving them the confidence to continue with good opportunities.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sometimes fear makes us miss good chances, and sometimes trust makes us ignore warning signs. This project is designed to help users make smarter, calmer, and more organized decisions.
